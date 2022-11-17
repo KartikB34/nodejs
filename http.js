@@ -3,7 +3,7 @@ const fs = require("fs");
 
 // http.createServer((req,res,next) => {
 
-const PORT = 2000;
+const PORT = process.env.PORT;
 const hostname = "localhost";
 const home = fs.readFileSync("./index.html")
 
