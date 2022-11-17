@@ -4,7 +4,7 @@ const fs = require("fs");
 // http.createServer((req,res,next) => {
 
 const PORT = process.env.PORT;
-const hostname = "localhost";
+// const hostname = "localhost";      /use while using localhost no need at heroku deployment
 const home = fs.readFileSync("./index.html")
 
 const server = http.createServer((req,res) => {
@@ -25,7 +25,7 @@ const server = http.createServer((req,res) => {
     }
 })
 
-server.listen(PORT,"localhost", () => {
+server.listen(PORT, () => {
 
     console.log(`Server is working on http://${hostname}:${PORT}`)
 })
